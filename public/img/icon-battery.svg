@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2768,0)">
+        <g id="icon-battery" transform="matrix(1.26367,0,0,0.915456,-730.593,21.834)">
+            <rect x="2768.61" y="-23.85" width="202.585" height="279.642" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2768.61" y="-23.85" width="202.585" height="279.642"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0.395674,0,0,0.546176,2768.61,-27.2602)">
+                    <path d="M74.455,337.619L192.352,337.619L74.455,197.076L74.455,337.619Z" style="fill:rgb(75,75,75);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(0.395674,0,0,0.546176,2768.61,-27.2602)">
+                    <path d="M457.004,167.447L457.004,99.924L0,99.924L0,412.076L457.004,412.076L457.004,344.552L512,344.552L512,167.447L457.004,167.447ZM410.791,298.338L410.791,365.862L46.213,365.862L46.213,146.139L410.791,146.139L410.791,213.662L465.785,213.662L465.785,298.338L410.791,298.338Z" style="fill:rgb(75,75,75);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,7 +6,8 @@ import AboutPurchase from "./_sections/AboutPurchase";
 import OurShops from "./_sections/OurShops";
 import OurJourney from "./_sections/OurJourney";
 import SpecialOffers from "./_sections/SpecialOffers";
-import Contacts, { ContactCategory } from "@/app/_sections/Contacts";
+import Contacts from "@/app/_sections/Contacts";
+import { ContactCategory } from "@/app/common/enum";
 import {
     SectionTitle_AboutPurchase,
     SectionTitle_AboutRepair,

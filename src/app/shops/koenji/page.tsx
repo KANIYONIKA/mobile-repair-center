@@ -17,7 +17,8 @@ import {
 } from "@/app/_components/SectionTitles";
 import { MAX_DISPLAY_POSTS, SHOP_INFORMATION_Koenji } from "@/app/K";
 import ShopInformation from "@/app/_sections/ShopInformation";
-import Contacts, { ContactCategory } from "@/app/_sections/Contacts";
+import Contacts from "@/app/_sections/Contacts";
+import { ContactCategory } from "@/app/common/enum";
 import AboutPurchase from "@/app/_sections/AboutPurchase";
 import AboutRepair from "@/app/_sections/AboutRepair";
 import RepairPriceTable_Screen from "@/app/_sections/RepairPriceTable_Screen";

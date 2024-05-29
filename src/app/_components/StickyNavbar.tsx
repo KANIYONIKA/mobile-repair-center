@@ -71,7 +71,6 @@ export const StickyNavbar: React.FC<StickyNavbarProps> = ({ children, mobileTitl
                     </p>
 
                     {/* set Title for only mobile. data is from context. */}
-                    {/* <p className="md:hidden">{useBurgerMenuTitleValue()}</p> */}
                     <p className="md:hidden">{burgerTitle}</p>
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden xl:block">{navList}</div>

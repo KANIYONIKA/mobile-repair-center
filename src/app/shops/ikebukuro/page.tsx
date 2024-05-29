@@ -12,7 +12,8 @@ import {
 } from "@/app/_components/SectionTitles";
 import { MAX_DISPLAY_POSTS, SHOP_INFORMATION_Ikebukuro } from "@/app/K";
 import ShopInformation from "@/app/_sections/ShopInformation";
-import Contacts, { ContactCategory } from "@/app/_sections/Contacts";
+import Contacts from "@/app/_sections/Contacts";
+import { ContactCategory } from "@/app/common/enum";
 import AboutPurchase from "@/app/_sections/AboutPurchase";
 import FAQ_Purchase from "@/app/_sections/FAQ_Purchase";
 import OurShops from "@/app/_sections/OurShops";

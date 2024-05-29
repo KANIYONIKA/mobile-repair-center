@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import "../_styles/burger.scss";
 import { Link as Scroll } from "react-scroll";
 import { FadeIn } from "./FadeIn";
 

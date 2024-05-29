@@ -4,11 +4,7 @@ import ResponsiveXScrollContainer from "../_containers/ResponsiveXScrollContaine
 import React from "react";
 import { SHOP_INFORMATION } from "../K";
 import { FadeIn } from "../_components/FadeIn";
-
-export enum ContactCategory {
-    ToShopsPage = 0,
-    ToEachShopPage = 1,
-}
+import { ContactCategory } from "../common/enum";
 
 interface ContactsProps {
     contactCategory: ContactCategory;

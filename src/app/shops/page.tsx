@@ -1,6 +1,7 @@
 import ResponsiveSectionContainer from "../_containers/ResponsiveSectionContainer";
 import PageTitle from "../_components/PageTitle";
-import Contacts, { ContactCategory } from "@/app/_sections/Contacts";
+import Contacts from "@/app/_sections/Contacts";
+import { ContactCategory } from "@/app/common/enum";
 import { SHOP_INFORMATION_Ikebukuro, SHOP_INFORMATION_Koenji, SHOP_INFORMATION_TakadanobabaMain } from "../K";
 import ShopInformation from "../_sections/ShopInformation";
 import StickyNavbar from "../_components/StickyNavbar";

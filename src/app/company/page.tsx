@@ -1,8 +1,6 @@
 import ResponsiveSectionContainer from "../_containers/ResponsiveSectionContainer";
 import PageTitle from "../_components/PageTitle";
 import { SectionTitle_Company } from "../_components/SectionTitles";
-import { useBurgerMenuTitleSetValue } from "../common/Context";
-import { useEffect } from "react";
 import { FadeIn } from "../_components/FadeIn";
 import { SHOP_INFORMATION_Ikebukuro, SHOP_INFORMATION_Koenji, COMPANY_INFORMATION_LingRise, SHOP_INFORMATION_TakadanobabaMain } from "../K";
 import StickyNavbar from "../_components/StickyNavbar";

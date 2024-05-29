@@ -34,7 +34,6 @@ interface PostsResponse {
 }
 
 export function filterPostByDatabaseId(posts: Post[], targetDatabaseId: string): Post | undefined {
-    console.log("targetDatabaseId: ", targetDatabaseId);
     const foundPost = posts.find((post) => {
         return post.databaseId.toString() === targetDatabaseId;
     });

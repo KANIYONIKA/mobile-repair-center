@@ -5,6 +5,12 @@ export interface Category {
     slug: string;
 }
 
+// 投稿のアイキャッチ画像の型定義
+export interface FeaturedImage {
+    altText: string;
+    sourceUrl: string;
+}
+
 // 投稿の型定義
 export interface Post {
     databaseId: string;
@@ -13,6 +19,9 @@ export interface Post {
     date: string;
     modified: string;
     content: string;
+    featuredImage: {
+        node: FeaturedImage;
+    };
     categories: {
         nodes: Category[];
     };
@@ -57,6 +66,12 @@ export const fetchPostsWithContent = async (byCategoryName: string): Promise<Pos
             posts( where: {orderby: {order: DESC, field: DATE}, categoryName: "${byCategoryName}"}) {
                 nodes {
                     databaseId title date modified content
+                    featuredImage {
+                        node {
+                          altText
+                          sourceUrl(size: LARGE)
+                        }
+                    }
                 }
             }
             serverTime
@@ -69,9 +84,15 @@ export const fetchPostsWithContent = async (byCategoryName: string): Promise<Pos
 export const fetchAllPostsWithContent = async (): Promise<Post[]> => {
     const query = `
         query AllPostsWithContent {
-            posts(where: {orderby: {order: DESC, field: DATE}}) {
+            posts(where: {orderby: {order: DESC, field: DATE}}, first: 2000) {
                 nodes {
                     databaseId title date modified content
+                    featuredImage {
+                        node {
+                          altText
+                          sourceUrl(size: LARGE)
+                        }
+                    }
                     categories {
                         nodes {
                             name
@@ -87,7 +108,7 @@ export const fetchAllPostsWithContent = async (): Promise<Post[]> => {
     return fetchPosts(query, debugMsg);
 };
 
-export const fetchPostsOnlyHeader = async (byCategoryName: string, first: number = 0): Promise<Post[]> => {
+export const fetchPostsOnlyHeader = async (byCategoryName: string, first: number = 2000): Promise<Post[]> => {
     const query = `
         query AllPosts {
             posts( where: {orderby: {order: DESC, field: DATE}, categoryName: "${byCategoryName}"} ${first > 0 ? "first: " + first : ""}) {

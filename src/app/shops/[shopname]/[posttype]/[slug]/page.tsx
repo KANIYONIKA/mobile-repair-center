@@ -3,6 +3,7 @@ import Archives from "@/app/_components/Archives";
 import PageTitle from "@/app/_components/PageTitle";
 import PostBody from "@/app/_components/PostBody";
 import PostDate from "@/app/_components/PostDate";
+import PostFeaturedImage from "@/app/_components/PostFeaturedImage";
 import { SectionTitle_NEWS } from "@/app/_components/SectionTitles";
 import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
@@ -145,12 +146,15 @@ export default async function PostDetails({ params }: { params: { shopname: stri
     if (params.slug !== "archives") {
         const post = filterPostByDatabaseId(filteredPosts, params.slug);
 
+        console.log("--------------------------------------");
+        console.log(post);
         if (post) {
             return (
                 <StickyNavbar mobileTitle="">
                     <ResponsiveSectionContainer>
                         <SectionTitle_NEWS english={sectionTitleEn} japanese={sectionTitleJp} />
                         <PostDate date={post.date.substring(0, 10)} modified={post.modified.substring(0, 10)} />
+                        {post.featuredImage ? <PostFeaturedImage sourceUrl={post.featuredImage.node.sourceUrl} altText={post.featuredImage.node.altText} /> : null}
                         <PageTitle literal={post.title} />
                         <div className="border-l border-white py-2  pl-4">
                             <PostBody body={post.content} />

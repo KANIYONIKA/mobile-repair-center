@@ -53,7 +53,7 @@ export function getFirstNPosts(posts: Post[], count: number): Post[] {
 
 export const fetchPostsWithContent = async (byCategoryName: string): Promise<Post[]> => {
     const query = `
-        query AllPosts {
+        query PostsWithContentByCategoryName {
             posts( where: {orderby: {order: DESC, field: DATE}, categoryName: "${byCategoryName}"}) {
                 nodes {
                     databaseId title date modified content
@@ -68,15 +68,10 @@ export const fetchPostsWithContent = async (byCategoryName: string): Promise<Pos
 
 export const fetchAllPostsWithContent = async (): Promise<Post[]> => {
     const query = `
-        query AllPosts {
+        query AllPostsWithContent {
             posts(where: {orderby: {order: DESC, field: DATE}}) {
                 nodes {
-                    databaseId
-                    title
-                    link
-                    date
-                    modified
-                    content
+                    databaseId title date modified content
                     categories {
                         nodes {
                             name

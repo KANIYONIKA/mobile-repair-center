@@ -2,11 +2,13 @@ import { SHOP_INFORMATION_Ikebukuro, SHOP_INFORMATION_Koenji, SHOP_INFORMATION_T
 import Archives from "@/app/_components/Archives";
 import PageTitle from "@/app/_components/PageTitle";
 import PostBody from "@/app/_components/PostBody";
+import PostDate from "@/app/_components/PostDate";
 import { SectionTitle_NEWS } from "@/app/_components/SectionTitles";
 import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
-import { Post, fetchAllPostsWithContent, filterPostByDatabaseId, filterPostsByCategorySlug } from "@/app/_lib/wordpress";
+import { Post, fetchAllPostsWithContent, fetchPostsWithContent, filterPostByDatabaseId, filterPostsByCategorySlug } from "@/app/_lib/wordpress";
+import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {
     takadanobabaMain = "takadanobaba-main",
@@ -65,7 +67,7 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
 }
 
 export default async function PostDetails({ params }: { params: { shopname: string; posttype: string; slug: string } }) {
-    const posts = await fetchAllPostsWithContent();
+    // const posts = await fetchAllPostsWithContent();
     let sectionTitleEn = "";
     let sectionTitleJp = "";
     let eachPostBaseUri = "";
@@ -78,21 +80,24 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleEn = "Takadanobaba - NEWS";
             sectionTitleJp = "高田馬場本店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_TakadanobabaMain.newsPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_TakadanobabaMain.newsPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.ikebukuro) {
             sectionTitleEn = "Ikebukuro - NEWS";
             sectionTitleJp = "池袋店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_Ikebukuro.newsPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_Ikebukuro.newsPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.koenji) {
             sectionTitleEn = "Koenji - NEWS";
             sectionTitleJp = "高円寺店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_Koenji.newsPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.newsPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Koenji.newsPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_Koenji.newsPostArchivesUri;
         }
     }
@@ -101,21 +106,24 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleEn = "Takadanobaba - Blog";
             sectionTitleJp = "高田馬場本店 - 買取ブログ";
             eachPostBaseUri = SHOP_INFORMATION_TakadanobabaMain.blogPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_TakadanobabaMain.blogPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.ikebukuro) {
             sectionTitleEn = "Ikebukuro - Blog";
             sectionTitleJp = "池袋店 - 買取ブログ";
             eachPostBaseUri = SHOP_INFORMATION_Ikebukuro.blogPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_Ikebukuro.blogPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.koenji) {
             sectionTitleEn = "Koenji - Blog";
             sectionTitleJp = "高円寺店 - 買取 & 修理 ブログ";
             eachPostBaseUri = SHOP_INFORMATION_Koenji.blogPostBaseUri;
-            filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.blogPostCategoryName);
+            filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Koenji.blogPostCategoryName);
+            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_Koenji.blogPostArchivesUri;
         }
     }
@@ -135,15 +143,18 @@ export default async function PostDetails({ params }: { params: { shopname: stri
     }
 
     if (params.slug !== "archives") {
-        const post = filterPostByDatabaseId(posts, params.slug);
+        const post = filterPostByDatabaseId(filteredPosts, params.slug);
 
         if (post) {
             return (
                 <StickyNavbar mobileTitle="">
                     <ResponsiveSectionContainer>
                         <SectionTitle_NEWS english={sectionTitleEn} japanese={sectionTitleJp} />
+                        <PostDate date={post.date.substring(0, 10)} modified={post.modified.substring(0, 10)} />
                         <PageTitle literal={post.title} />
-                        <PostBody body={post.content} date={post.date.substring(0, 10)} modified={post.modified.substring(0, 10)} />
+                        <div className="border-l border-white py-2  pl-4">
+                            <PostBody body={post.content} />
+                        </div>
                         <ToArchives archivesUri={archivesUri} literal="他の記事を読む" />
                     </ResponsiveSectionContainer>
                 </StickyNavbar>

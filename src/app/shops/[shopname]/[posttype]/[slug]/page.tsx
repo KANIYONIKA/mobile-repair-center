@@ -8,7 +8,7 @@ import { SectionTitle_NEWS } from "@/app/_components/SectionTitles";
 import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
-import { Post, fetchAllPostsWithContent, fetchPostsWithContent, filterPostByDatabaseId, filterPostsByCategorySlug } from "@/app/_lib/wordpress";
+import { Post, fetchAllPostsWithContent, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId, filterPostsByCategorySlug } from "@/app/_lib/wordpress";
 import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {
@@ -32,29 +32,51 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
     const posts: Post[] = await fetchAllPostsWithContent();
     const staticParams: StaticParam[] = [];
 
-    // This is for PostDetails
-    posts.forEach((post) => {
-        post.categories.nodes.forEach((category) => {
-            if (category.slug === SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-            }
-            if (category.slug === SHOP_INFORMATION_Ikebukuro.newsPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-            }
-            if (category.slug === SHOP_INFORMATION_Koenji.newsPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-            }
-            if (category.slug === SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-            }
-            if (category.slug === SHOP_INFORMATION_Ikebukuro.blogPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-            }
-            if (category.slug === SHOP_INFORMATION_Koenji.blogPostCategoryName) {
-                staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-            }
+    const postHeaders_TakNews: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
+    const postHeaders_TakBlog: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
+    const postHeaders_IkeNews: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
+    const postHeaders_IkeBlog: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
+    const postHeaders_KoeNews: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_Koenji.newsPostCategoryName);
+    const postHeaders_KoeBlog: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_Koenji.blogPostCategoryName);
+
+    function pushToStaticParams(posts: Post[], slugForShopName: SlugForShopName, slugForPostType: SlugForPostType) {
+        posts.forEach((post) => {
+            staticParams.push({ shopname: slugForShopName, posttype: slugForPostType, slug: post.databaseId.toString() });
         });
-    });
+    }
+
+    // This is for PostDetails
+    pushToStaticParams(postHeaders_TakNews, SlugForShopName.takadanobabaMain, SlugForPostType.news);
+    pushToStaticParams(postHeaders_TakBlog, SlugForShopName.takadanobabaMain, SlugForPostType.blog);
+    pushToStaticParams(postHeaders_IkeNews, SlugForShopName.ikebukuro, SlugForPostType.news);
+    pushToStaticParams(postHeaders_IkeBlog, SlugForShopName.ikebukuro, SlugForPostType.blog);
+    pushToStaticParams(postHeaders_KoeNews, SlugForShopName.koenji, SlugForPostType.news);
+    pushToStaticParams(postHeaders_KoeBlog, SlugForShopName.koenji, SlugForPostType.blog);
+
+    // This is for PostDetails
+    // posts.forEach((post) => {
+    //     post.categories.nodes.forEach((category) => {
+    //         if (category.slug === SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
+    //         }
+    //         if (category.slug === SHOP_INFORMATION_Ikebukuro.newsPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
+    //         }
+    //         if (category.slug === SHOP_INFORMATION_Koenji.newsPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
+    //         }
+    //         if (category.slug === SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
+    //         }
+    //         if (category.slug === SHOP_INFORMATION_Ikebukuro.blogPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
+    //         }
+    //         if (category.slug === SHOP_INFORMATION_Koenji.blogPostCategoryName) {
+    //             staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
+    //         }
+    //     });
+    // });
+
     // This is for Archives
     staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.news, slug: "archives" });
     staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.blog, slug: "archives" });

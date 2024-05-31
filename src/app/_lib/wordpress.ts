@@ -142,6 +142,8 @@ export const fetchPosts = async (query: string, debugMsg: string): Promise<Post[
 
         const result: PostsResponse = JSON.parse(text);
         if (response.ok) {
+            console.log("-------------PostsResponse---------------------");
+            console.log("fetchPosts.length: ", fetchPosts.length);
             // console.log("\n------------------------: "); // デバッグ用にレスポンスをログに出力
             // console.log("\nDebugMSG: ", debugMsg); // デバッグ用にレスポンスをログに出力
             // console.log("\nRaw response: ", text); // デバッグ用にレスポンスをログに出力

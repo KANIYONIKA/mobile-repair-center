@@ -41,7 +41,7 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
 
     function pushToStaticParams(posts: Post[], slugForShopName: SlugForShopName, slugForPostType: SlugForPostType) {
         posts.forEach((post) => {
-            console.log("----------");
+            console.log("------pushToStaticParams----");
             console.log(post);
             staticParams.push({ shopname: slugForShopName, posttype: slugForPostType, slug: post.databaseId.toString() });
         });

@@ -127,7 +127,12 @@ export const fetchPosts = async (query: string, debugMsg: string): Promise<Post[
     try {
         process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         const api_url = process.env.GRAPHQL_API_URL;
-        const response = await fetch(api_url!, {
+
+        if (!api_url) {
+            throw new Error("GRAPHQL_API_URL is not defined");
+        }
+
+        const response = await fetch(api_url, {
             // next: { revalidate: 1 },
             method: "POST",
             headers: {
@@ -140,14 +145,12 @@ export const fetchPosts = async (query: string, debugMsg: string): Promise<Post[
 
         const text = await response.text();
 
+        if (!text) {
+            throw new Error("Response text is undefined or null");
+        }
+
         const result: PostsResponse = JSON.parse(text);
         if (response.ok) {
-            console.log("-------------PostsResponse---------------------");
-            console.log("fetchPosts.length: ", fetchPosts.length);
-            // console.log("\n------------------------: "); // デバッグ用にレスポンスをログに出力
-            // console.log("\nDebugMSG: ", debugMsg); // デバッグ用にレスポンスをログに出力
-            // console.log("\nRaw response: ", text); // デバッグ用にレスポンスをログに出力
-            // console.log("\nnode count: ", result.data.posts.nodes.length);
             return result.data.posts.nodes.map((post) => post);
         } else {
             console.error("\nError response:", result.extensions?.debug);
@@ -156,6 +159,9 @@ export const fetchPosts = async (query: string, debugMsg: string): Promise<Post[
         }
     } catch (error) {
         console.error("\nFetch error:", error);
+        if (error instanceof Error) {
+            console.error("Error message: ", error.message);
+        }
         return [];
     }
 };

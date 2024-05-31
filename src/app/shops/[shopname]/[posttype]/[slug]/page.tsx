@@ -41,6 +41,7 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
 
     function pushToStaticParams(posts: Post[], slugForShopName: SlugForShopName, slugForPostType: SlugForPostType) {
         posts.forEach((post) => {
+            console.log("----------", post);
             staticParams.push({ shopname: slugForShopName, posttype: slugForPostType, slug: post.databaseId.toString() });
         });
     }
@@ -144,8 +145,8 @@ export default async function PostDetails({ params }: { params: { shopname: stri
     if (params.slug !== "archives") {
         const post = filterPostByDatabaseId(filteredPosts, params.slug);
 
-        console.log("--------------------------------------");
-        console.log(post);
+        // console.log("--------------------------------------");
+        // console.log(post);
         if (post) {
             return (
                 <StickyNavbar mobileTitle="">

@@ -53,30 +53,6 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
     pushToStaticParams(postHeaders_KoeNews, SlugForShopName.koenji, SlugForPostType.news);
     pushToStaticParams(postHeaders_KoeBlog, SlugForShopName.koenji, SlugForPostType.blog);
 
-    // This is for PostDetails
-    // posts.forEach((post) => {
-    //     post.categories.nodes.forEach((category) => {
-    //         if (category.slug === SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-    //         }
-    //         if (category.slug === SHOP_INFORMATION_Ikebukuro.newsPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-    //         }
-    //         if (category.slug === SHOP_INFORMATION_Koenji.newsPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.news, slug: post.databaseId.toString() });
-    //         }
-    //         if (category.slug === SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-    //         }
-    //         if (category.slug === SHOP_INFORMATION_Ikebukuro.blogPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.ikebukuro, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-    //         }
-    //         if (category.slug === SHOP_INFORMATION_Koenji.blogPostCategoryName) {
-    //             staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.blog, slug: post.databaseId.toString() });
-    //         }
-    //     });
-    // });
-
     // This is for Archives
     staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.news, slug: "archives" });
     staticParams.push({ shopname: SlugForShopName.takadanobabaMain, posttype: SlugForPostType.blog, slug: "archives" });

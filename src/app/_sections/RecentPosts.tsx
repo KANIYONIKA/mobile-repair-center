@@ -20,7 +20,7 @@ const RecentPosts: React.FC<RecentPostsProps> = async (props) => {
                 <div className="border-l border-white pl-4 text-primary-text2">
                     {posts.map((post, index) => (
                         <div className="mt-1 flex" key={post.databaseId}>
-                            <p className="mr-7">{post.date.substring(0, 10)}</p>
+                            <p className="mr-7">{post.date.substring(5, 10)}</p>
                             <Link href={props.baseUri + "/" + post.databaseId}>
                                 <p className="hover:underline">{post.title}</p>
                             </Link>

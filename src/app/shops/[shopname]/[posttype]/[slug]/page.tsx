@@ -41,7 +41,8 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
 
     function pushToStaticParams(posts: Post[], slugForShopName: SlugForShopName, slugForPostType: SlugForPostType) {
         posts.forEach((post) => {
-            console.log("----------", post);
+            console.log("----------");
+            console.log(post);
             staticParams.push({ shopname: slugForShopName, posttype: slugForPostType, slug: post.databaseId.toString() });
         });
     }
@@ -62,12 +63,12 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
     staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.news, slug: "archives" });
     staticParams.push({ shopname: SlugForShopName.koenji, posttype: SlugForPostType.blog, slug: "archives" });
 
+    console.log("-------------------------------------------");
     console.log("[slug]/page.tsx", staticParams);
     return staticParams;
 }
 
 export default async function PostDetails({ params }: { params: { shopname: string; posttype: string; slug: string } }) {
-    // const posts = await fetchAllPostsWithContent();
     let sectionTitleEn = "";
     let sectionTitleJp = "";
     let eachPostBaseUri = "";
@@ -81,7 +82,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "高田馬場本店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_TakadanobabaMain.newsPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_TakadanobabaMain.newsPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.ikebukuro) {
@@ -89,7 +89,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "池袋店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_Ikebukuro.newsPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_Ikebukuro.newsPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.koenji) {
@@ -97,7 +96,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "高円寺店 - NEWS";
             eachPostBaseUri = SHOP_INFORMATION_Koenji.newsPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Koenji.newsPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.newsPostCategoryName);
             archivesUri = SHOP_INFORMATION_Koenji.newsPostArchivesUri;
         }
     }
@@ -107,7 +105,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "高田馬場本店 - 買取ブログ";
             eachPostBaseUri = SHOP_INFORMATION_TakadanobabaMain.blogPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_TakadanobabaMain.blogPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.ikebukuro) {
@@ -115,7 +112,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "池袋店 - 買取ブログ";
             eachPostBaseUri = SHOP_INFORMATION_Ikebukuro.blogPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Ikebukuro.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_Ikebukuro.blogPostArchivesUri;
         }
         if (params.shopname === SlugForShopName.koenji) {
@@ -123,7 +119,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
             sectionTitleJp = "高円寺店 - 買取 & 修理 ブログ";
             eachPostBaseUri = SHOP_INFORMATION_Koenji.blogPostBaseUri;
             filteredPosts = await fetchPostsWithContent(SHOP_INFORMATION_Koenji.blogPostCategoryName);
-            // filteredPosts = filterPostsByCategorySlug(posts, SHOP_INFORMATION_Koenji.blogPostCategoryName);
             archivesUri = SHOP_INFORMATION_Koenji.blogPostArchivesUri;
         }
     }
@@ -145,8 +140,6 @@ export default async function PostDetails({ params }: { params: { shopname: stri
     if (params.slug !== "archives") {
         const post = filterPostByDatabaseId(filteredPosts, params.slug);
 
-        // console.log("--------------------------------------");
-        // console.log(post);
         if (post) {
             return (
                 <StickyNavbar mobileTitle="">

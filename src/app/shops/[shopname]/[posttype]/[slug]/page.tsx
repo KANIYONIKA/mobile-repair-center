@@ -9,7 +9,6 @@ import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
 import { Post, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId } from "@/app/_lib/wordpress";
-import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {
     takadanobabaMain = "takadanobaba-main",
@@ -146,11 +145,9 @@ export default async function PostDetails({ params }: { params: { shopname: stri
                         <SectionTitle_NEWS english={sectionTitleEn} japanese={sectionTitleJp} />
                         <PostDate date={post.date.substring(0, 10)} modified={post.modified.substring(0, 10)} />
                         {post.featuredImage ? <PostFeaturedImage sourceUrl={post.featuredImage.node.sourceUrl} altText={post.featuredImage.node.altText} /> : null}
-                        <div className="posyStyle">
-                            <PageTitle literal={post.title} />
-                            <div className="border-l border-white py-2  pl-4">
-                                <PostBody body={post.content} />
-                            </div>
+                        <PageTitle literal={post.title} />
+                        <div className="border-l border-white py-2 pl-4">
+                            <PostBody body={post.content} />
                         </div>
                         <ToArchives archivesUri={archivesUri} literal="他の記事を読む" />
                     </ResponsiveSectionContainer>

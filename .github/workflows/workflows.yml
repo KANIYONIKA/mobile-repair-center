@@ -7,6 +7,10 @@ on:
     repository_dispatch:
         types: [after_saving_wordpress]
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     build:
         runs-on: ubuntu-latest

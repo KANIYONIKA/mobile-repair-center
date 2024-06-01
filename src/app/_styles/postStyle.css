@@ -33,3 +33,7 @@ h6 {
     font-weight: bold;
     margin: 1.67em 0;
 }
+
+p {
+    margin-bottom: 1em; /* 好きな値に変更してください */
+}

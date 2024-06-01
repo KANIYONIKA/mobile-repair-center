@@ -8,7 +8,7 @@ import { SectionTitle_NEWS } from "@/app/_components/SectionTitles";
 import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
-import { Post, fetchAllPostsWithContent, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId } from "@/app/_lib/wordpress";
+import { Post, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId } from "@/app/_lib/wordpress";
 import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {
@@ -29,7 +29,6 @@ type StaticParam = {
 };
 
 export async function generateStaticParams(): Promise<StaticParam[]> {
-    const posts: Post[] = await fetchAllPostsWithContent();
     const staticParams: StaticParam[] = [];
 
     const postHeaders_TakNews: Post[] = await fetchPostsOnlyHeader(SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName);

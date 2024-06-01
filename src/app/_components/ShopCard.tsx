@@ -27,12 +27,7 @@ const ShopCard: React.FC<SHOP_INFORMATION> = (props) => {
                 <Icon src="/img/icon-marker.svg" alt={"mapを開く"} linkText={""} link={""} newTab={false} />
                 <details className="text-primary-text1 underline">
                     <summary className="text-sm">Mapを開く</summary>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1153.4158263011!2d139.64894199271242!3d35.706099808065396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f398522e6757%3A0xcd9813e6826d326d!2zaVBob25l5L-u55CGIOODouODkOOCpOODq-S_rueQhuOCu-ODs-OCv-ODvOmrmOWGhuWvuuW6lw!5e0!3m2!1sja!2sjp!4v1709235495977!5m2!1sja!2sjp"
-                        width="400"
-                        height="400"
-                        loading="lazy"
-                    ></iframe>
+                    <iframe src={props.mapURL} width="400" height="400" loading="lazy"></iframe>
                 </details>
             </div>
         </>

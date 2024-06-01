@@ -1,5 +1,6 @@
 "use client";
 import { FadeIn } from "./FadeIn";
+import "@/app/_styles/postStyle.css";
 
 export const PostBody: React.FC<{ body: string }> = (props) => {
     return (

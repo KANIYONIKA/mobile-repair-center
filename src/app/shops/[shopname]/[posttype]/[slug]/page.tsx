@@ -9,7 +9,6 @@ import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
 import { Post, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId } from "@/app/_lib/wordpress";
-import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {
     takadanobabaMain = "takadanobaba-main",

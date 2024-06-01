@@ -57,7 +57,7 @@ export const SHOP_INFORMATION_TakadanobabaMain: SHOP_INFORMATION = {
 
     email: "takadanobaba@jc-connection.jp",
 
-    mapURL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2538.777688720129!2d139.7029261496006!3d35.71227979721748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dfc0f75ba8f%3A0x9d120b725a076c98!2zaVBob25l5L-u55CGIOODouODkOOCpOODq-S_rueQhuOCu-ODs-OCv-ODvOmrmOeUsOmmrOWgtOW6lw!5e0!3m2!1sja!2sjp!4v1709259566994!5m2!1sja!2sjp",
+    mapURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4839.178816580236!2d139.70138227139617!3d35.713863525540354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dfc0f75ba8f%3A0x9d120b725a076c98!2zaVBob25l5L-u55CG44Oi44OQ44Kk44Or5L-u55CG44K744Oz44K_44O86auY55Sw6aas5aC05bqX!5e0!3m2!1sja!2sjp!4v1717251497292!5m2!1sja!2sjp",
 
     shopImgSrc: "/img/shop-takadanobaba-main.png",
     shopImgAlt: "高田馬場本店",
@@ -94,7 +94,7 @@ export const SHOP_INFORMATION_Ikebukuro: SHOP_INFORMATION = {
 
     email: "ikebukuro@jc-connection.jp",
 
-    mapURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.760521798046!2d139.71137637692416!3d35.73210772717583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d668f4e05bd%3A0x861e644420569a1!2z44OA44Kk44Ov44Oz44OG44Os44Kz44Og5rGg6KKL5bqX!5e0!3m2!1sja!2sjp!4v1709266120774!5m2!1sja!2sjp",
+    mapURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.760698890745!2d139.71137101183407!3d35.73210337245648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d668f4e05bd%3A0x861e644420569a1!2zaVBob25l5L-u55CG44OA44Kk44Ov44Oz44OG44Os44Kz44Og5rGg6KKL5bqX!5e0!3m2!1sja!2sjp!4v1717251598000!5m2!1sja!2sjp",
 
     shopImgSrc: "/img/shop-ikebukuro.webp",
     shopImgAlt: "池袋店",

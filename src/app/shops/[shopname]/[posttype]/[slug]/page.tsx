@@ -8,7 +8,7 @@ import { SectionTitle_NEWS } from "@/app/_components/SectionTitles";
 import StickyNavbar from "@/app/_components/StickyNavbar";
 import ToArchives from "@/app/_components/ToArchives";
 import ResponsiveSectionContainer from "@/app/_containers/ResponsiveSectionContainer";
-import { Post, fetchAllPostsWithContent, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId, filterPostsByCategorySlug } from "@/app/_lib/wordpress";
+import { Post, fetchAllPostsWithContent, fetchPostsOnlyHeader, fetchPostsWithContent, filterPostByDatabaseId } from "@/app/_lib/wordpress";
 import "@/app/_styles/postStyle.css";
 
 enum SlugForShopName {

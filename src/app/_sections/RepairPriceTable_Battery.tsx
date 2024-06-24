@@ -80,7 +80,10 @@ const RepairPriceTable_Battery: React.FC = () => {
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
                                     <span className="hidden md:block">XS / XSMax / X / XR</span>
-                                    <span className="block md:hidden">XS / XSMax / X / XR</span>
+                                    <span className="block md:hidden">
+                                        XS / XSMax
+                                        <br />X / XR
+                                    </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>5,800円</td>
                                 <td className={css_tbody_tr_td_2}>8,000円</td>
@@ -88,7 +91,10 @@ const RepairPriceTable_Battery: React.FC = () => {
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
                                     <span className="hidden md:block">8 / 8Plus / 7 / 7Plus</span>
-                                    <span className="block md:hidden">8 / 8Plus / 7 / 7Plus</span>
+                                    <span className="block md:hidden">
+                                        8 / 8Plus
+                                        <br />7 / 7Plus
+                                    </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>5,000円</td>
                                 <td className={css_tbody_tr_td_2}>6,000円</td>
@@ -96,7 +102,10 @@ const RepairPriceTable_Battery: React.FC = () => {
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
                                     <span className="hidden md:block">6s / 6sPlus / 6 / 6Plus</span>
-                                    <span className="block md:hidden">6s / 6sPlus / 6 / 6Plus</span>
+                                    <span className="block md:hidden">
+                                        6s / 6sPlus
+                                        <br />6 / 6Plus
+                                    </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>4,500円</td>
                                 <td className={css_tbody_tr_td_2}>6,000円</td>
@@ -121,6 +130,7 @@ const RepairPriceTable_Battery: React.FC = () => {
                     <p className="mb-2">＊価格は税抜です。</p>
                     <p className="mb-2">＊ iPad / Android / NintendoSwitch など、その他の機種については、店舗までお問い合わせください。</p>
                     <p className="mb-2">＊ 起動不良 / 水没 / カメラ / スピーカー / 背面割れ など、その他の修理については、店舗までお問い合わせください。</p>
+                    <p className="mb-2">＊ 表示価格からキャンペーンによる割引をご利用できます！詳細は、店舗までお問い合わせください。</p>
                 </div>
             </FadeIn>
         </>

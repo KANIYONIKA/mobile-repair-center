@@ -57,7 +57,8 @@ const RepairPriceTable_Substrate: React.FC = () => {
                 </div>
 
                 <div className="border-l border-white pl-5 text-sm text-primary-text2">
-                    <p className="mb-2">＊価格は税抜です。</p>
+                    <p className="mb-2">＊ 価格は税抜です。</p>
+                    <p className="mb-2">＊ 表示価格からキャンペーンによる割引をご利用できます！詳細は、店舗までお問い合わせください。</p>
                 </div>
             </FadeIn>
         </>

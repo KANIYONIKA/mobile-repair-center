@@ -27,7 +27,7 @@ export default function Ikebukuro() {
                 <MainImage homeTitleDesktopImgSrc={SHOP_INFORMATION_Ikebukuro.homeTitleDesktopImgSrc} homeTitleTabletImgSrc={SHOP_INFORMATION_Ikebukuro.homeTitleTabletImgSrc} />
                 <main className="">
                     <ResponsiveSectionContainer>
-                        <SectionTitle_RecentPosts english="NEWS" japanese="新着情報" />
+                        <SectionTitle_RecentPosts english="NEWS" japanese="おしらせ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_Ikebukuro.newsPostCategoryName}
                             first={MAX_DISPLAY_POSTS}
@@ -36,7 +36,7 @@ export default function Ikebukuro() {
                         />
                     </ResponsiveSectionContainer>
 
-                    <ResponsiveSectionContainer>
+                    {/* <ResponsiveSectionContainer>
                         <SectionTitle_RecentPosts english="BLOGs" japanese="買取 ブログ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_Ikebukuro.blogPostCategoryName}
@@ -44,7 +44,7 @@ export default function Ikebukuro() {
                             baseUri={SHOP_INFORMATION_Ikebukuro.blogPostBaseUri}
                             archivesUri={SHOP_INFORMATION_Ikebukuro.blogPostArchivesUri}
                         />
-                    </ResponsiveSectionContainer>
+                    </ResponsiveSectionContainer> */}
 
                     <section id="ask">
                         <ResponsiveSectionContainer>

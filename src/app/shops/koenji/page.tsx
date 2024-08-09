@@ -37,7 +37,7 @@ export default function Koenji() {
                 <MainImage homeTitleDesktopImgSrc={SHOP_INFORMATION_Koenji.homeTitleDesktopImgSrc} homeTitleTabletImgSrc={SHOP_INFORMATION_Koenji.homeTitleTabletImgSrc} />
                 <main className="">
                     <ResponsiveSectionContainer>
-                        <SectionTitle_RecentPosts english="NEWS" japanese="新着情報" />
+                        <SectionTitle_RecentPosts english="NEWS" japanese="おしらせ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_Koenji.newsPostCategoryName}
                             first={MAX_DISPLAY_POSTS}
@@ -46,7 +46,7 @@ export default function Koenji() {
                         />
                     </ResponsiveSectionContainer>
 
-                    <ResponsiveSectionContainer>
+                    {/* <ResponsiveSectionContainer>
                         <SectionTitle_RecentPosts english="BLOGs" japanese="買取 & 修理 ブログ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_Koenji.blogPostCategoryName}
@@ -54,7 +54,7 @@ export default function Koenji() {
                             baseUri={SHOP_INFORMATION_Koenji.blogPostBaseUri}
                             archivesUri={SHOP_INFORMATION_Koenji.blogPostArchivesUri}
                         />
-                    </ResponsiveSectionContainer>
+                    </ResponsiveSectionContainer> */}
 
                     <section id="ask">
                         <ResponsiveSectionContainer>

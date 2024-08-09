@@ -27,7 +27,7 @@ export default function TakadanobabaMain() {
                 <MainImage homeTitleDesktopImgSrc={SHOP_INFORMATION_TakadanobabaMain.homeTitleDesktopImgSrc} homeTitleTabletImgSrc={SHOP_INFORMATION_TakadanobabaMain.homeTitleTabletImgSrc} />
                 <main className="">
                     <ResponsiveSectionContainer>
-                        <SectionTitle_RecentPosts english="NEWS" japanese="新着情報" />
+                        <SectionTitle_RecentPosts english="NEWS" japanese="おしらせ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_TakadanobabaMain.newsPostCategoryName}
                             first={MAX_DISPLAY_POSTS}
@@ -36,7 +36,7 @@ export default function TakadanobabaMain() {
                         />
                     </ResponsiveSectionContainer>
 
-                    <ResponsiveSectionContainer>
+                    {/* <ResponsiveSectionContainer>
                         <SectionTitle_RecentPosts english="BLOGs" japanese="買取 ブログ" />
                         <RecentPosts
                             categoryName={SHOP_INFORMATION_TakadanobabaMain.blogPostCategoryName}
@@ -44,7 +44,8 @@ export default function TakadanobabaMain() {
                             baseUri={SHOP_INFORMATION_TakadanobabaMain.blogPostBaseUri}
                             archivesUri={SHOP_INFORMATION_TakadanobabaMain.blogPostArchivesUri}
                         />
-                    </ResponsiveSectionContainer>
+                    </ResponsiveSectionContainer> */}
+
                     <section id="ask">
                         <ResponsiveSectionContainer>
                             <SectionTitle_ShopInfo english="INFO - Takadanobaba" japanese="高田馬場本店" />

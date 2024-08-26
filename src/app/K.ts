@@ -170,7 +170,7 @@ export const COMPANY_INFORMATION_LingRise: COMPANY_INFORMATION = {
     capital: "300万円",
     tel: "03-5937-3912",
     postCode: "〒169-0075",
-    address: "東京都新宿区高田馬場３丁目１−１",
+    address: "東京都新宿区高田馬場1-29-8 いちご高田馬場ビル 1F",
     email: "",
 };
 

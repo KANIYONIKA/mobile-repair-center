@@ -23,8 +23,8 @@ const RepairPriceTable_Substrate: React.FC = () => {
                             </tr>
                             <tr className="bg-primary-tableHeaderBg">
                                 <th className="w-1/3 border border-white py-2">モデル</th>
-                                <th className="w-1/3 border border-white py-2">軽度</th>
-                                <th className="w-1/3 border border-white py-2">重度</th>
+                                <th className="w-1/3 border border-white py-2">水没修理</th>
+                                <th className="w-1/3 border border-white py-2">起動不良</th>
                             </tr>
                         </thead>
                         <tbody>

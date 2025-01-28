@@ -30,35 +30,108 @@ const RepairPriceTable_Screen: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">15Pro / 15ProMax</span>
-                                    <span className="block md:hidden">15Pro / 15ProMax</span>
+                                    <span className="hidden md:block">16シリーズ</span>
+                                    <span className="block md:hidden">16シリーズ</span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）65,000円</td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）70,000円</td>
+                                <td className={css_tbody_tr_td_2} colSpan={2}>
+                                    お問い合わせください。
+                                </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">15 / 15Plus</span>
-                                    <span className="block md:hidden">15 / 15Plus</span>
+                                    <span className="hidden md:block">15ProMax</span>
+                                    <span className="block md:hidden">15ProMax</span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）60,000円</td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）65,000円</td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）40,000円
+                                    <br />
+                                    （有機EL）49,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）48,000円
+                                    <br />
+                                    （有機EL）58,000円
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">15Pro</span>
+                                    <span className="block md:hidden">15Pro</span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）37,000円
+                                    <br />
+                                    （有機EL）43,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）42,000円
+                                    <br />
+                                    （有機EL）50,000円
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">15Plus</span>
+                                    <span className="block md:hidden">15Plus</span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）34,000円
+                                    <br />
+                                    （有機EL）37,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）53,000円
+                                    <br />
+                                    （有機EL）45,000円
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">15</span>
+                                    <span className="block md:hidden">15</span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）30,000円
+                                    <br />
+                                    （有機EL）36,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）35,000円
+                                    <br />
+                                    （有機EL）42,000円
+                                </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
                                     <span className="hidden md:block">14ProMax</span>
                                     <span className="block md:hidden">14ProMax</span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）58,000円</td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）63,000円</td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）35,000円
+                                    <br />
+                                    （有機EL）42,500円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）41,000円
+                                    <br />
+                                    （有機EL）52,000円
+                                </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
                                     <span className="hidden md:block">14Pro</span>
                                     <span className="block md:hidden">14Pro</span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）54,000円</td>
-                                <td className={css_tbody_tr_td_2}>（有機EL）59,000円</td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）32,000円
+                                    <br />
+                                    （有機EL）39,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）38,000円
+                                    <br />
+                                    （有機EL）44,000円
+                                </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
@@ -66,14 +139,14 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">14Plus</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）33,000円
+                                    （LCDパネル）28,000円
                                     <br />
-                                    （有機EL）43,000円
+                                    （有機EL）33,000円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）38,000円
+                                    （LCDパネル）33,000円
                                     <br />
-                                    （有機EL）48,000円
+                                    （有機EL）41,000円
                                 </td>
                             </tr>
                             <tr>
@@ -82,12 +155,12 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">14</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）30,000円
+                                    （LCDパネル）25,000円
                                     <br />
-                                    （有機EL）35,000円
+                                    （有機EL）32,000円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）35,000円
+                                    （LCDパネル）31,000円
                                     <br />
                                     （有機EL）40,000円
                                 </td>
@@ -100,34 +173,48 @@ const RepairPriceTable_Screen: React.FC = () => {
                                 <td className={css_tbody_tr_td_2}>
                                     （LCDパネル）33,000円
                                     <br />
-                                    （有機EL）43,000円
+                                    （有機EL）39,000円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
                                     （LCDパネル）37,000円
                                     <br />
-                                    （有機EL）47,000円
+                                    （有機EL）45,000円
                                 </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">13 / 13Pro / 13mini</span>
+                                    <span className="hidden md:block">13Pro</span>
+                                    <span className="block md:hidden">13Pro</span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）28,000円
+                                    <br />
+                                    （有機EL）36,000円
+                                </td>
+                                <td className={css_tbody_tr_td_2}>
+                                    （LCDパネル）34,000円
+                                    <br />
+                                    （有機EL）42,000円
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">13 / 13mini</span>
                                     <span className="block md:hidden">
                                         13
-                                        <br />
-                                        13Pro
                                         <br />
                                         13mini
                                     </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）30,000円
+                                    （LCDパネル）23,000円
                                     <br />
-                                    （有機EL）55,000円
+                                    （有機EL）30,000円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）34,000円
+                                    （LCDパネル）28,000円
                                     <br />
-                                    （有機EL）59,000円
+                                    （有機EL）37,000円
                                 </td>
                             </tr>
                             <tr>
@@ -136,14 +223,14 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">12ProMax</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）26,800円
+                                    （LCDパネル）19,800円
                                     <br />
-                                    （有機EL）35,800円
+                                    （有機EL）27,800円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）30,800円
+                                    （LCDパネル）22,800円
                                     <br />
-                                    （有機EL）38,800円
+                                    （有機EL）32,800円
                                 </td>
                             </tr>
                             <tr>
@@ -158,14 +245,14 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）21,800円
+                                    （LCDパネル）17,800円
                                     <br />
-                                    （有機EL）29,800円
+                                    （有機EL）25,800円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）24,800円
+                                    （LCDパネル）21,000円
                                     <br />
-                                    （有機EL）32,800円
+                                    （有機EL）28,800円
                                 </td>
                             </tr>
                             <tr>
@@ -174,14 +261,14 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">11ProMax</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）15,800円
+                                    （LCDパネル）14,800円
                                     <br />
-                                    （有機EL）23,800円
+                                    （有機EL）21,800円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）18,800円
+                                    （LCDパネル）17,800円
                                     <br />
-                                    （有機EL）26,500円
+                                    （有機EL）25,800円
                                 </td>
                             </tr>
                             <tr>
@@ -190,12 +277,12 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">11Pro</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）13,000円
+                                    （LCDパネル）11,000円
                                     <br />
-                                    （有機EL）18,800円
+                                    （有機EL）17,800円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）16,500円
+                                    （LCDパネル）14,500円
                                     <br />
                                     （有機EL）21,800円
                                 </td>
@@ -218,36 +305,22 @@ const RepairPriceTable_Screen: React.FC = () => {
                                     <span className="block md:hidden">XS MAX</span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）11,000円
+                                    （LCDパネル）9,800円
                                     <br />
-                                    （有機EL）14,800円
+                                    （有機EL）12,800円
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）15,300円
+                                    （LCDパネル）12,800円
                                     <br />
-                                    （有機EL）18,000円
+                                    （有機EL）17,000円
                                 </td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">XS</span>
-                                    <span className="block md:hidden">XS</span>
-                                </td>
-                                <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）8,300円
-                                    <br />
-                                    （有機EL）10,300円
-                                </td>
-                                <td className={css_tbody_tr_td_2}>
-                                    （LCDパネル）10,300円
-                                    <br />
-                                    （有機EL）15,300円
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">X</span>
-                                    <span className="block md:hidden">X</span>
+                                    <span className="hidden md:block">X / XS</span>
+                                    <span className="block md:hidden">
+                                        X <br /> XS
+                                    </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>
                                     （LCDパネル）6,800円
@@ -262,46 +335,23 @@ const RepairPriceTable_Screen: React.FC = () => {
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">SE2 / SE3</span>
-                                    <span className="block md:hidden">SE2 / SE3</span>
-                                </td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）5,800円</td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）7,800円</td>
-                            </tr>
-
-                            <tr>
-                                <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">8 / 8Plus</span>
-                                    <span className="block md:hidden">8 / 8Plus</span>
-                                </td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）5,800円</td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）7,800円</td>
-                            </tr>
-                            <tr>
-                                <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">7 / 7Plus / 6s / 6sPlus</span>
+                                    <span className="hidden md:block">8 / 8Plus / SE2 / SE3</span>
                                     <span className="block md:hidden">
-                                        7 / 7Plus
-                                        <br />
-                                        6s / 6sPlus
+                                        8 / 8Plus <br /> SE2 / SE3
                                     </span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）3,800円</td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）5,800円</td>
+                                <td className={css_tbody_tr_td_2}>（LCDパネル）5,500円</td>
+                                <td className={css_tbody_tr_td_2}>（LCDパネル）7,700円</td>
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">6 / 6Plus / SE / 5S / 5 / 5c</span>
+                                    <span className="hidden md:block">7 / 7Plus / 6s / 6sPlus / 6 / 6Plus / SE / 5S / 5 / 5c</span>
                                     <span className="block md:hidden">
-                                        6 / 6Plus
-                                        <br />
-                                        SE
-                                        <br />
-                                        5S / 5 / 5c
+                                        7 / 7Plus <br /> 6s / 6sPlus <br /> 6 / 6Plus <br /> SE / 5S <br /> 5 / 5c
                                     </span>
                                 </td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）3,800円</td>
-                                <td className={css_tbody_tr_td_2}>（LCDパネル）5,800円</td>
+                                <td className={css_tbody_tr_td_2}>（LCDパネル）4,000円</td>
+                                <td className={css_tbody_tr_td_2}>（LCDパネル）6,000円</td>
                             </tr>
                         </tbody>
                     </table>

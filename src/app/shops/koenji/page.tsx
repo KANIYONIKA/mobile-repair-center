@@ -86,6 +86,11 @@ export default function Koenji() {
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
+                        <SectionTitle_FAQ_Repair />
+                        <FAQ_Repair />
+                    </ResponsiveSectionContainer>
+
+                    <ResponsiveSectionContainer>
                         <SectionTitle_RepairPrice_Screen />
                         <RepairPriceTable_Screen />
                     </ResponsiveSectionContainer>
@@ -98,11 +103,6 @@ export default function Koenji() {
                     <ResponsiveSectionContainer>
                         <SectionTitle_RepairPrice_Substrate />
                         <RepairPriceTable_Substrate />
-                    </ResponsiveSectionContainer>
-
-                    <ResponsiveSectionContainer>
-                        <SectionTitle_FAQ_Repair />
-                        <FAQ_Repair />
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>

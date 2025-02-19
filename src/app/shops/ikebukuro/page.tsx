@@ -61,13 +61,13 @@ export default function Ikebukuro() {
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
-                        <SectionTitle_Contact />
-                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Ikebukuro} />
+                        <SectionTitle_FAQ_Purchase />
+                        <FAQ_Purchase />
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
-                        <SectionTitle_FAQ_Purchase />
-                        <FAQ_Purchase />
+                        <SectionTitle_Contact />
+                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Ikebukuro} />
                     </ResponsiveSectionContainer>
 
                     <section id="shops">
@@ -76,6 +76,11 @@ export default function Ikebukuro() {
                             <OurShops />
                         </ResponsiveSectionContainer>
                     </section>
+
+                    <ResponsiveSectionContainer>
+                        <SectionTitle_Contact />
+                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Ikebukuro} />
+                    </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
                         <SectionTitle_SpecialOffers />

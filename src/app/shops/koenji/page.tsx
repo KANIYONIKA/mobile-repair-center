@@ -71,6 +71,16 @@ export default function Koenji() {
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
+                        <SectionTitle_FAQ_Purchase />
+                        <FAQ_Purchase />
+                    </ResponsiveSectionContainer>
+
+                    <ResponsiveSectionContainer>
+                        <SectionTitle_Contact />
+                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Koenji} />
+                    </ResponsiveSectionContainer>
+
+                    <ResponsiveSectionContainer>
                         <SectionTitle_AboutRepair />
                         <AboutRepair />
                     </ResponsiveSectionContainer>
@@ -91,18 +101,13 @@ export default function Koenji() {
                     </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
-                        <SectionTitle_Contact />
-                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Koenji} />
-                    </ResponsiveSectionContainer>
-
-                    <ResponsiveSectionContainer>
-                        <SectionTitle_FAQ_Purchase />
-                        <FAQ_Purchase />
-                    </ResponsiveSectionContainer>
-
-                    <ResponsiveSectionContainer>
                         <SectionTitle_FAQ_Repair />
                         <FAQ_Repair />
+                    </ResponsiveSectionContainer>
+
+                    <ResponsiveSectionContainer>
+                        <SectionTitle_Contact />
+                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Koenji} />
                     </ResponsiveSectionContainer>
 
                     <section id="shops">
@@ -111,6 +116,11 @@ export default function Koenji() {
                             <OurShops />
                         </ResponsiveSectionContainer>
                     </section>
+
+                    <ResponsiveSectionContainer>
+                        <SectionTitle_Contact />
+                        <Contacts contactCategory={ContactCategory.ToEachShopPage} shopInfo={SHOP_INFORMATION_Koenji} />
+                    </ResponsiveSectionContainer>
 
                     <ResponsiveSectionContainer>
                         <SectionTitle_SpecialOffers />

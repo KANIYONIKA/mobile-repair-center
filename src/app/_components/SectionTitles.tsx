@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import { COMPANY_INFORMATION_LingRise } from "../K";
 
 export const SectionTitle_Blog: React.FC<{ english: string; japanese: string }> = (props) => {
     return <SectionTitle english={props.english} japanese={props.japanese} />;
@@ -13,7 +14,7 @@ export const SectionTitle_PrivacyPolicy: React.FC = () => {
 };
 
 export const SectionTitle_Company: React.FC = () => {
-    return <SectionTitle english="Ling Rise,Inc." japanese="株式会社リングライズ" />;
+    return <SectionTitle english={COMPANY_INFORMATION_LingRise.englishName} japanese={COMPANY_INFORMATION_LingRise.japaneseName} />;
 };
 
 export const SectionTitle_FAQ_Repair: React.FC = () => {

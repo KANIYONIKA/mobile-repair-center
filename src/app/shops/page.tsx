@@ -29,9 +29,9 @@ export default function Shops() {
                     <ResponsiveSectionContainer>
                         <OpenShopPage shopInformation={SHOP_INFORMATION_TakadanobabaMain} />
                         <FadeIn>
-                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text1" onClick={() => setShowTakadanobaba(!showTakadanobaba)}>
+                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text2" onClick={() => setShowTakadanobaba(!showTakadanobaba)}>
                                 <span className={`mr-1 transition-transform ${showTakadanobaba ? "rotate-180" : "rotate-0"}`}>▼</span>
-                                {showTakadanobaba ? "店舗詳細を閉じる " : "店舗詳細を開く "}
+                                {showTakadanobaba ? "店舗詳細を閉じる " : "店舗情報を表示する "}
                             </a>
                         </FadeIn>
                         {showTakadanobaba && (
@@ -48,9 +48,9 @@ export default function Shops() {
                     <ResponsiveSectionContainer>
                         <OpenShopPage shopInformation={SHOP_INFORMATION_Ikebukuro} />
                         <FadeIn>
-                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text1" onClick={() => setShowIkebukuro(!showIkebukuro)}>
+                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text2" onClick={() => setShowIkebukuro(!showIkebukuro)}>
                                 <span className={`mr-1 transition-transform ${showIkebukuro ? "rotate-180" : "rotate-0"}`}>▼</span>
-                                {showIkebukuro ? "店舗詳細を閉じる " : "店舗詳細を開く "}
+                                {showIkebukuro ? "店舗詳細を閉じる " : "店舗情報を表示する "}
                             </a>
                         </FadeIn>
                         {showIkebukuro && (
@@ -67,9 +67,9 @@ export default function Shops() {
                     <ResponsiveSectionContainer>
                         <OpenShopPage shopInformation={SHOP_INFORMATION_Koenji} />
                         <FadeIn>
-                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text1" onClick={() => setShowKoenji(!showKoenji)}>
+                            <a className="mt-2 inline-flex cursor-pointer items-center text-primary-text2" onClick={() => setShowKoenji(!showKoenji)}>
                                 <span className={`mr-1 transition-transform ${showKoenji ? "rotate-180" : "rotate-0"}`}>▼</span>
-                                {showKoenji ? "店舗詳細を閉じる " : "店舗詳細を開く "}
+                                {showKoenji ? "店舗詳細を閉じる " : "店舗情報を表示する "}
                             </a>
                         </FadeIn>
                         {showKoenji && (

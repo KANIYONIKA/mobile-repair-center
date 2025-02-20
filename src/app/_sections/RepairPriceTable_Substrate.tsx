@@ -52,6 +52,14 @@ const RepairPriceTable_Substrate: React.FC = () => {
                                 <td className={css_tbody_tr_td_2}>29,800円〜</td>
                                 <td className={css_tbody_tr_td_2}>29,800円〜</td>
                             </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">その他</span>
+                                    <span className="block md:hidden">その他</span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>29,800円〜</td>
+                                <td className={css_tbody_tr_td_2}>29,800円〜</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

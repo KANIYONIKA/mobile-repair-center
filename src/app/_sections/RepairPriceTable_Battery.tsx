@@ -99,13 +99,23 @@ const RepairPriceTable_Battery: React.FC = () => {
                             </tr>
                             <tr>
                                 <td className={css_tbody_tr_td_1}>
-                                    <span className="hidden md:block">8 / 8Plus / 7 / 7Plus</span>
+                                    <span className="hidden md:block">8Plus / 7 / 7Plus</span>
                                     <span className="block md:hidden">
-                                        8 / 8Plus
+                                        8Plus
                                         <br />7 / 7Plus
                                     </span>
                                 </td>
                                 <td className={css_tbody_tr_td_2}>5,000円</td>
+                                <td className={css_tbody_tr_td_2}>6,000円</td>
+                            </tr>
+                            <tr>
+                                <td className={css_tbody_tr_td_1}>
+                                    <span className="hidden md:block">8</span>
+                                    <span className="block md:hidden">
+                                        8
+                                    </span>
+                                </td>
+                                <td className={css_tbody_tr_td_2}>4,000円</td>
                                 <td className={css_tbody_tr_td_2}>6,000円</td>
                             </tr>
                             <tr>

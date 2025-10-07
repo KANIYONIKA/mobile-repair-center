@@ -115,7 +115,7 @@ export const SHOP_INFORMATION_Koenji: SHOP_INFORMATION = {
     longName: "モバイル修理センター 高円寺 純情商店街店",
     shortName: "高円寺店",
     hours: "11:00~20:00",
-    holiday: "木曜日",
+    holiday: "なし",
 
     lineURL: "https://lin.ee/u9ZqF2Y",
     reserveURL: "https://airrsv.net/mobile-repair-kouenji/calendar",

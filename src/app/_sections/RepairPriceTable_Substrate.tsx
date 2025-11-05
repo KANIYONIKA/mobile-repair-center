@@ -179,7 +179,9 @@ const RepairPriceTable_Substrate: React.FC = () => {
             </div>
 
             <div className="border-l border-white pl-5 text-sm text-primary-text2">
-                <p className="mb-2">＊ 価格は税込です。</p>
+                <p className="mb-2">＊価格は税込です。</p>
+                <p className="mb-2">＊ iPad | Android | NintendoSwitch など、その他の機種については、店舗までお問い合わせください。</p>
+                <p className="mb-2">＊ 起動不良 | 水没 | カメラ | スピーカー | 背面割れ など、その他の修理については、店舗までお問い合わせください。</p>
                 <p className="mb-2">＊ 表示価格からキャンペーンによる割引をご利用できます！詳細は、店舗までお問い合わせください。</p>
             </div>
         </FadeIn>

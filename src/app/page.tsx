@@ -43,7 +43,7 @@ export default function Home() {
 
 					<section id="ask">
 						<ResponsiveSectionContainer>
-							<SectionTitle_Contact />````
+							<SectionTitle_Contact />
 							<Contacts
 								contactCategory={ContactCategory.ToShopsPage}
 								shopInfo={null}

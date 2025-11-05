@@ -33,9 +33,8 @@ const RepairPriceTable_Battery: React.FC = () => {
                             <td className={css_tbody_tr_td_1}>
                                 <p>17シリーズ</p>
                             </td>
-                            <td className="border border-white py-2" colSpan={2}>
-                                お問い合わせください
-                            </td>
+                            <td className={css_tbody_tr_td_2}>お問い合わせください</td>
+                            <td className={css_tbody_tr_td_2}>お問い合わせください</td>
                         </tr>
 
                         {/* 15シリーズ */}

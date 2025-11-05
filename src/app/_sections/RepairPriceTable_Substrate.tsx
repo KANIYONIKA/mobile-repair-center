@@ -27,17 +27,17 @@ const RepairPriceTable_Substrate: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
+
                         {/* 17シリーズ */}
                         <tr>
                             <td className={css_tbody_tr_td_1}>
                                 <p>17シリーズ</p>
                             </td>
-                            <td className="border border-white py-2" colSpan={2}>
-                                お問い合わせください
-                            </td>
+                            <td className={css_tbody_tr_td_2}>お問い合わせください</td>
+                            <td className={css_tbody_tr_td_2}>お問い合わせください</td>
                         </tr>
 
-                        {/* 15シリーズ */}
+                        {/* 16シリーズ */}
                         <tr>
                             <td className={css_tbody_tr_td_1}>
                                 <p>16ProMax</p>

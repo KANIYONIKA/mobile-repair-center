@@ -82,7 +82,7 @@ export const SHOP_INFORMATION_Ikebukuro: SHOP_INFORMATION = {
 
     lineURL: "https://lin.ee/iMa84t1W",
     reserveURL: "https://airrsv.net/daiwanikebukuro/calendar",
-    tel: "03-5937-3912",
+    tel: "03-6877-3810",
 
     divisions: "販売 / 買取 / 修理(要問合)",
     route: "JR | 丸ノ内線",
